@@ -1,12 +1,40 @@
 import React, { useState } from "react";
-import GoogleMaps from "./component/GoogleMaps";
+import LinkGenerator from "./component/LinkGenerator/Link";
 import Intro from "./component/intro";
 import Content from "./component/content";
+import {
+  Routes,
+  Route,
+  useParams,
+  useQuery,
+  useSearchParams,
+} from "react-router-dom";
+
+import { songPath } from "./constant";
+
+const ChooseSong = (songCode) => {
+  return songPath[songCode];
+};
 
 function App() {
-  const [isOpened, setIsOpened] = useState(false);
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<ChrisXElsaContainer />} />
+        <Route path="/link-generator" element={<LinkGenerator />} />
+      </Routes>
+    </>
+  );
+}
 
-  let audio = new Audio("songs/otherside.mp3");
+const ChrisXElsaContainer = () => {
+  const [isOpened, setIsOpened] = useState(false);
+  const [searchParams] = useSearchParams();
+  const user = searchParams.get("user");
+  const name = searchParams.get("name");
+
+  let audioPath = ChooseSong(user);
+  let audio = new Audio(audioPath);
 
   const startAudio = () => {
     audio.play();
@@ -19,26 +47,21 @@ function App() {
   };
 
   return (
-    <>
-      <div className="bg-biru-tua">
-        <div className="container mx-auto max-w-screen-md min-h-screen bg-biru-tua shadow-2xl">
-          <Intro onClickBukaUndangan={handleBukaUndangan} isOpened={isOpened} />
-          {isOpened && (
-            <>
-              <Content />
-            </>
-
-            // <GoogleMaps
-            //   className="flex justify-center"
-            //   lat={-8.07375035064174}
-            //   lng={111.9045955200124}
-            //   getDirectionUrl="https://www.google.com/maps/place/Crown+Victoria+Hotel/@-8.0737392,111.9024038,17z/data=!3m1!4b1!4m8!3m7!1s0x2e78e2e33e8320df:0xa675321a9341eba!5m2!4m1!1i2!8m2!3d-8.0737445!4d111.9045925"
-            // />
-          )}
-        </div>
+    <div className="bg-biru-tua">
+      <div className="container mx-auto max-w-screen-md min-h-screen bg-biru-tua shadow-2xl">
+        <Intro
+          onClickBukaUndangan={handleBukaUndangan}
+          isOpened={isOpened}
+          name={name}
+        />
+        {isOpened && (
+          <>
+            <Content />
+          </>
+        )}
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default App;

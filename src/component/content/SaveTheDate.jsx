@@ -3,7 +3,7 @@ import React from "react";
 export default function SaveTheDate() {
   return (
     <>
-      <div className="flex items-center flex-col relative min-h-screen relative">
+      <div className="flex items-center flex-col relative min-h-screen">
         <img
           className="w-2/3 mt-10 lg:w-1/2"
           src="/img/savetodate.png"
@@ -27,17 +27,17 @@ export default function SaveTheDate() {
           17.00 - End
         </div>
         <div className="font-Century text-sm text-white tracking-wider">
-          Hotel Crown Victoria, Tulungagung
+          Crown Victoria Hotel, Tulungagung
         </div>
         <img
-          className="absolute left-0 -bottom-40"
+          className="absolute left-0 -bottom-20"
           src="/img/aksen-kiri-content.png"
           alt=""
         />
         <img
           className="absolute right-0 bottom-0"
           src="/img/left-flower.png"
-          alt=""
+          alt=""Y
         />
       </div>
     </>

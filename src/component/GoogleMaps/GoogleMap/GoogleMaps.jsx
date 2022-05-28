@@ -3,9 +3,9 @@ import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
 const containerStyle = {
   width: "100%",
-  height: "600px",
-  border: "1px solid #208DD4",
-  borderRadius: "15px",
+  height: "400px",
+  border: "8px solid #C6A56B",
+  borderRadius: "20px",
 };
 
 function GoogleMaps(props) {

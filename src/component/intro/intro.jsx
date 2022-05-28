@@ -3,7 +3,7 @@ import Button from "../common/Button";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function intro(props) {
-  const { onClickBukaUndangan, isOpened } = props;
+  const { onClickBukaUndangan, isOpened, name } = props;
   return (
     <>
       <AnimatePresence>
@@ -30,7 +30,16 @@ export default function intro(props) {
               alt=""
             />
             <img className="mt-10 px-2" src="/img/chrisxelsa.png" alt="" />
-            <div className="mt-20 z-10">
+            <div>
+              <div className="text-white text-center">
+                Kepada Yth Bpk/Ibu/Saudara/i:
+              </div>
+              <div className="text-white text-center font-Century">
+                {name}
+              </div>
+              <div className="text-white text-center">Di tempat.</div>
+            </div>
+            <div className="mt-10 z-10">
               <Button label={"Buka Undangan"} onClick={onClickBukaUndangan} />
             </div>
           </motion.div>

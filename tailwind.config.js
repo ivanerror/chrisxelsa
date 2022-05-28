@@ -13,6 +13,7 @@ module.exports = {
       },
       colors: {
         "biru-tua": "#111930",
+        "emas-asyik" : "#C6A56B"
       },
     },
   },

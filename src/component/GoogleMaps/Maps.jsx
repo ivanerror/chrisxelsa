@@ -1,5 +1,6 @@
 import React from "react";
 import GoogleMaps from "./GoogleMap/GoogleMaps";
+import Button from "../common/Button";
 
 export default function Maps(props) {
   const { getDirectionUrl, lat, lng } = props;
@@ -15,14 +16,11 @@ export default function Maps(props) {
 
   return (
     <>
-      <div className="flex flex-col items-center">
+      <div className="p-4 container">
         <GoogleMaps center={center} />
-        <button
-          onClick={handleGetDirection}
-          className="p-4 font-bold w-52 bg-cyan-200 rounded-lg m-4"
-        >
-          Get Direction!
-        </button>
+      </div>
+      <div className="my-4">
+        <Button onClick={handleGetDirection} label={"Buka Peta"} />
       </div>
     </>
   );
