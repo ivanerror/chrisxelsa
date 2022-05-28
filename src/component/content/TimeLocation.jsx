@@ -11,7 +11,7 @@ export default function TimeLocation() {
       <div className="font-Century text-white text-3xl text-center font-AlexBrush text-emas-asyik">
         Countdown Timer
       </div>
-      <CountdownTimer className="mt-4" dueDate={new Date("07/10/2022")} />
+      <CountdownTimer className="mt-4" dueDate={new Date("07/10/2022 17:00")} />
       <div className="font-Century text-white text-2xl text-center py-4">
         Location
       </div>
@@ -31,7 +31,7 @@ const CountdownTimer = (props) => {
   const [days, hours, minutes, seconds] = useCountdown(dueDate);
 
   return (
-    <div className="flex gap-2 my-4">
+    <div className="flex lg:gap-6 gap-2 my-4">
       <Countdown count={days} timeProperties={"Days"} />
       <Countdown count={hours} timeProperties={"Hours"} />
       <Countdown count={minutes} timeProperties={"Mins"} />

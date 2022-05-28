@@ -6,7 +6,7 @@ export default function Button(props) {
   return (
     <>
       <button
-        className="text-white border-2 p-3 rounded-xl font-Century text-sm hover:shadow-lg hover:bg-white/20 transition-all duration-200"
+        className="text-emas-asyik border-2 border-emas-asyik py-2 px-6 rounded-xl font-Century text-sm hover:shadow-lg hover:bg-white/20 transition-all duration-200"
         onClick={onClick}
       >
         {label}

@@ -26,7 +26,7 @@ export default function SaveTheDate() {
         <div className="font-Century text-2xl text-white tracking-wider">
           17.00 - End
         </div>
-        <div className="font-Century text-sm text-white tracking-wider">
+        <div className="font-Century text-md text-emas-asyik tracking-wider">
           Crown Victoria Hotel, Tulungagung
         </div>
         <img

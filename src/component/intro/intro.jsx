@@ -34,7 +34,7 @@ export default function intro(props) {
               <div className="text-white text-center">
                 Kepada Yth Bpk/Ibu/Saudara/i:
               </div>
-              <div className="text-white text-center font-Century">
+              <div className="text-white font-bold text-center font-Century">
                 {name}
               </div>
               <div className="text-white text-center">Di tempat.</div>

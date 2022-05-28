@@ -1,0 +1,21 @@
+.swiper-landscape {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+ .swiper-landscape .swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    object-fit: cover;
+    box-shadow: -3px 8px 34px 0px rgba(0,0,0,0.3);
+    height: 300px;
+    border-radius: 20px;
+  }
+  
+  .swiper-landscape .swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
