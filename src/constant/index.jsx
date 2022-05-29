@@ -3,6 +3,7 @@ export const songPath = {
   stay: "songs/stay.mp3",
   ktv: "songs/ktv.mp3",
   leehi: "songs/leehi.mp3",
+  careless: "songs/careless.mp3"
 };
 
 export const SlidePathPotrait = ["P1.jpeg", "P2.jpeg", "P3.jpeg", "P4.jpeg"];
