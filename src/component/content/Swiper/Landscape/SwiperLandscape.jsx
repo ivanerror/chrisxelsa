@@ -1,46 +1,51 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import PropTypes from 'prop-types'
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
 
-import { Autoplay, EffectCoverflow, Pagination } from "swiper";
-import "./SwiperLandscape.css";
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper'
+import './SwiperLandscape.css'
 
-export default function SwiperPotrait(props) {
-  const { pathList } = props;
+export default function SwiperPotrait (props) {
+  const { pathList } = props
 
   return (
     <>
       <Swiper
-        effect={"coverflow"}
+        effect={'coverflow'}
         centeredSlides={true}
         autoplay={{
           delay: 4000,
-          disableOnInteraction: false,
+          disableOnInteraction: false
         }}
-        slidesPerView={"auto"}
+        slidesPerView={'auto'}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
           depth: 100,
           modifier: 1,
-          slideShadows: true,
+          slideShadows: true
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination, Autoplay]}
         className="swiper-landscape"
       >
-        {pathList.map((x) => {
+        {pathList.map((x, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <img className="rounded-xl" src={`/img/slideshow/${x}`} />;
             </SwiperSlide>
-          );
+          )
         })}
       </Swiper>
     </>
-  );
+  )
+}
+
+SwiperPotrait.propTypes = {
+  pathList: PropTypes.array.isRequired
 }

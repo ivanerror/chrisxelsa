@@ -1,22 +1,20 @@
-import React, { useState } from "react";
-import LinkGenerator from "./component/LinkGenerator/Link";
-import Intro from "./component/intro";
-import Content from "./component/content";
+import React, { useState } from 'react'
+import LinkGenerator from './component/LinkGenerator/Link'
+import Intro from './component/intro'
+import Content from './component/content'
 import {
   Routes,
   Route,
-  useParams,
-  useQuery,
-  useSearchParams,
-} from "react-router-dom";
+  useSearchParams
+} from 'react-router-dom'
 
-import { songPath } from "./constant";
+import { songPath } from './constant'
 
 const ChooseSong = (songCode) => {
-  return songPath[songCode];
-};
+  return songPath[songCode]
+}
 
-function App() {
+function App () {
   return (
     <>
       <Routes>
@@ -24,27 +22,27 @@ function App() {
         <Route path="/link-generator" element={<LinkGenerator />} />
       </Routes>
     </>
-  );
+  )
 }
 
 const ChrisXElsaContainer = () => {
-  const [isOpened, setIsOpened] = useState(false);
-  const [searchParams] = useSearchParams();
-  const user = searchParams.get("user");
-  const name = searchParams.get("name");
+  const [isOpened, setIsOpened] = useState(false)
+  const [searchParams] = useSearchParams()
+  const user = searchParams.get('user')
+  const name = searchParams.get('name')
 
-  let audioPath = ChooseSong(user);
-  let audio = new Audio(audioPath);
+  const audioPath = ChooseSong(user)
+  const audio = new Audio(audioPath)
 
   const startAudio = () => {
-    audio.play();
-  };
+    audio.play()
+  }
 
   const handleBukaUndangan = () => {
-    console.log("Buka undangan");
-    setIsOpened(true);
-    startAudio();
-  };
+    console.log('Buka undangan')
+    setIsOpened(true)
+    startAudio()
+  }
 
   return (
     <div className="bg-biru-tua">
@@ -61,7 +59,7 @@ const ChrisXElsaContainer = () => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
