@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-export default function SaveTheDate() {
+export default function SaveTheDate () {
   return (
     <>
       <div className="flex items-center flex-col relative min-h-screen">
@@ -41,5 +41,5 @@ export default function SaveTheDate() {
         />
       </div>
     </>
-  );
+  )
 }

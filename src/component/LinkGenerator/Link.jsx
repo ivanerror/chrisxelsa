@@ -1,26 +1,26 @@
-import React, { useState } from "react";
-import { songPath } from "../../constant";
-import {QRCodeCanvas} from 'qrcode.react';
+import React, { useState } from 'react'
+import { songPath } from '../../constant'
+import { QRCodeCanvas } from 'qrcode.react'
 
-export default function Link() {
-  const [name, setName] = useState("");
-  const song = Object.entries(songPath).map(([key, value]) => ({ key, value }));
-  const [songSelected, setSongSelected] = useState(song[0].key);
+export default function Link () {
+  const [name, setName] = useState('')
+  const song = Object.entries(songPath).map(([key, value]) => ({ key, value }))
+  const [songSelected, setSongSelected] = useState(song[0].key)
   const [uriGenarated, setUriGenarated] = useState(
     `${window.location.protocol}//${window.location.host}/`
-  );
+  )
 
   const handleChange = (e) => {
-    setSongSelected(e.target.value);
-  };
+    setSongSelected(e.target.value)
+  }
 
   const handleGenerate = () => {
     const uri = `${window.location.protocol}//${
       window.location.host
-    }/?user=${songSelected}&name=${encodeURIComponent(name)}`;
-    setUriGenarated(uri);
-    navigator.clipboard.writeText(uri);
-  };
+    }/?user=${songSelected}&name=${encodeURIComponent(name)}`
+    setUriGenarated(uri)
+    navigator.clipboard.writeText(uri)
+  }
 
   return (
     <div className="container flex flex-col items-center mx-auto mt-10">
@@ -31,8 +31,8 @@ export default function Link() {
         onChange={handleChange}
         className="border-2"
       >
-        {song.map((x) => {
-          return <option value={x.key}>{x.key}</option>;
+        {song.map((x, index) => {
+          return <option key={index} value={x.key}>{x.key}</option>
         })}
       </select>
       <label htmlFor="">Name</label>
@@ -49,5 +49,5 @@ export default function Link() {
       <div>{uriGenarated}</div>
       <QRCodeCanvas value={uriGenarated} />,
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-export default function profile() {
+export default function profile () {
   return (
     <>
       <div className="min-h-screen">
@@ -43,5 +43,5 @@ export default function profile() {
         </div>
       </div>
     </>
-  );
+  )
 }

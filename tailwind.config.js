@@ -1,21 +1,21 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     theme: {
       fontSize: {
-        sm: "14px",
-      },
+        sm: '14px'
+      }
     },
     extend: {
       fontFamily: {
-        AlexBrush: ["Alex Brush", "cursive"],
-        Century: ["Century", "sans-serif"],
+        AlexBrush: ['Alex Brush', 'cursive'],
+        Century: ['Century', 'sans-serif']
       },
       colors: {
-        "biru-tua": "#111930",
-        "emas-asyik" : "#C6A56B"
-      },
-    },
+        'biru-tua': '#111930',
+        'emas-asyik': '#C6A56B'
+      }
+    }
   },
-  plugins: [],
-};
+  plugins: []
+}

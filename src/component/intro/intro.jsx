@@ -1,9 +1,9 @@
-import React from "react";
-import Button from "../common/Button";
-import { motion, AnimatePresence } from "framer-motion";
+import React from 'react'
+import Button from '../common/Button'
+import { motion, AnimatePresence } from 'framer-motion'
 
-export default function intro(props) {
-  const { onClickBukaUndangan, isOpened, name } = props;
+export default function intro (props) {
+  const { onClickBukaUndangan, isOpened, name } = props
   return (
     <>
       <AnimatePresence>
@@ -40,11 +40,11 @@ export default function intro(props) {
               <div className="text-white text-center">Di tempat.</div>
             </div>
             <div className="mt-10 z-10">
-              <Button label={"Buka Undangan"} onClick={onClickBukaUndangan} />
+              <Button label={'Buka Undangan'} onClick={onClickBukaUndangan} />
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </>
-  );
+  )
 }

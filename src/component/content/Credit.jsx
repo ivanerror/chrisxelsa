@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-export default function Credit() {
+export default function Credit () {
   return (
     <div className="py-10">
       <div className="text-xs pt-5 text-emas-asyik/50 text-center">
@@ -10,5 +10,5 @@ export default function Credit() {
         Gabriel Ivan S & Kevin Tio
       </div>
     </div>
-  );
+  )
 }
