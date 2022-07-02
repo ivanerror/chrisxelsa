@@ -3,8 +3,16 @@ export const songPath = {
   stay: 'songs/stay.mp3',
   ktv: 'songs/ktv.mp3',
   leehi: 'songs/leehi.mp3',
-  careless: 'songs/careless.mp3'
+  careless: 'songs/careless.mp3',
+  genshin: 'songs/genshin.mp3'
 }
 
-export const SlidePathPotrait = ['P1.jpeg', 'P2.jpeg', 'P3.jpeg', 'P4.jpeg']
-export const SlidePathLandscape = ['L1.jpeg', 'L2.jpeg']
+export const SlidePathPotrait = [
+  'p4.jpg',
+  'p5.jpg',
+  'p6.jpg',
+  'p7.jpg',
+  'p8.jpg',
+  'p9.jpg'
+]
+export const SlidePathLandscape = ['l1.jpg', 'l4.jpg', 'l5.jpg']

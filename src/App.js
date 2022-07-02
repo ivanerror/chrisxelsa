@@ -35,6 +35,7 @@ const ChrisXElsaContainer = () => {
   const audio = new Audio(audioPath)
 
   const startAudio = () => {
+    audio.loop = true
     audio.play()
   }
 

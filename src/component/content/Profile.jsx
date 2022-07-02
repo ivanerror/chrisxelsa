@@ -12,33 +12,37 @@ export default function profile () {
             <div className="font-AlexBrush text-emas-asyik text-4xl">
               Christian Tiodinata
             </div>
-            <div className="font-Century text-white leading-5">
+            <div className="font-Century text-white leading-5 px-2">
               Putra pertama dari keluarga <br />
-              Bapak ... dan Ibu ...
+              Bapak Djoko Rachmadi (Wempi) dan Ibu Lusy Mehantini
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center md:mt-10 sm:mt-4">
           <img className="w-24" src="/img/and.png" alt="" />
         </div>
         <div className="text-right mr-4  md:mx-20">
           <div className="font-AlexBrush text-emas-asyik text-4xl">
-            Elsa Triutari
+            Elsa Tri Utari
           </div>
-          <div className="font-Century text-white leading-5">
+          <div className="font-Century text-white leading-5 px-2">
             Putri pertama dari keluarga <br />
-            Bapak ... dan Ibu ...
+            Bapak H. Ahmad (Alm) dan Ibu Lisnawati
           </div>
         </div>
 
         <div className="px-2 lg:px-8">
           <div className="font-Century text-emas-asyik text-xl text-center mt-10">
-            LAGI FOKUS MAU NAMBAH ISTRI
+            Kebahagian kami akan sempurna <br /> dengan kehadiran Bapak / Ibu /
+            Saudara / i
           </div>
-          <div className="font-Century text-white text-sm text-center mt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            provident earum quaerat natus quos adipisci voluptatibus odit et
-            deserunt optio.
+          <div className="font-Century text-white text-sm italic text-center mt-4 px-2">
+            &quot;Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu,
+            apa yang telah dipersatukan Allah tidak boleh diceraikan
+            manusia&quot;
+          </div>
+          <div className="font-Century text-white text-md text-center mt-4">
+            ~ Matius 19:6 ~
           </div>
         </div>
       </div>

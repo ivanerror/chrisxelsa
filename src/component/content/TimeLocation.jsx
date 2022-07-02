@@ -5,14 +5,14 @@ import GoogleMaps from '../GoogleMaps'
 import PropTypes from 'prop-types'
 
 export default function TimeLocation () {
-  const title = 'We\'re Getting Married'
+  const title = "We're Getting Married"
 
   return (
     <div className="flex flex-col mt-10 items-center">
       <div className="font-Century text-white text-2xl text-center">
         {title}
       </div>
-      <div className='text-3xl text-center font-AlexBrush text-emas-asyik'>
+      <div className="text-3xl text-center font-AlexBrush text-emas-asyik">
         Countdown Timer
       </div>
       <CountdownTimer className="mt-4" dueDate={new Date('07/10/2022 17:00')} />
@@ -34,12 +34,19 @@ const CountdownTimer = (props) => {
 
   const [days, hours, minutes, seconds] = useCountdown(dueDate)
 
+  const isDueDate = (count) => {
+    if (count < 0) {
+      return 0
+    }
+    return count
+  }
+
   return (
     <div className="flex lg:gap-6 gap-2 my-4">
-      <Countdown count={days} timeProperties={'Days'} />
-      <Countdown count={hours} timeProperties={'Hours'} />
-      <Countdown count={minutes} timeProperties={'Mins'} />
-      <Countdown count={seconds} timeProperties={'Secs'} />
+      <Countdown count={isDueDate(days)} timeProperties={'Days'} />
+      <Countdown count={isDueDate(hours)} timeProperties={'Hours'} />
+      <Countdown count={isDueDate(minutes)} timeProperties={'Mins'} />
+      <Countdown count={isDueDate(seconds)} timeProperties={'Secs'} />
     </div>
   )
 }

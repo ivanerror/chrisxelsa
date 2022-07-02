@@ -1,6 +1,11 @@
 import React from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 export default function SaveTheDate () {
+  const [searchParams] = useSearchParams()
+
+  const time = searchParams.get('time')
+
   return (
     <>
       <div className="flex items-center flex-col relative min-h-screen">
@@ -23,9 +28,24 @@ export default function SaveTheDate () {
           </div>
         </div>
 
-        <div className="font-Century text-2xl text-white tracking-wider">
-          17.00 - End
-        </div>
+        {time === 'free' && (
+          <div className="font-Century text-2xl text-white tracking-wider">
+            17.00 - End
+          </div>
+        )}
+
+        {time === '17' && (
+          <div className="font-Century text-2xl text-white tracking-wider">
+            17.00 - 18.00
+          </div>
+        )}
+
+        {time === '18' && (
+          <div className="font-Century text-2xl text-white tracking-wider">
+            18.00 - 19.00
+          </div>
+        )}
+
         <div className="font-Century text-md text-emas-asyik tracking-wider">
           Crown Victoria Hotel, Tulungagung
         </div>
@@ -37,7 +57,8 @@ export default function SaveTheDate () {
         <img
           className="absolute right-0 bottom-0"
           src="/img/left-flower.png"
-          alt=""Y
+          alt=""
+          Y
         />
       </div>
     </>

@@ -7,10 +7,10 @@
   .swiper-potrait .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 300px;
+    width: 400px;
     object-fit: cover;
     box-shadow: -3px 8px 34px 0px rgba(0,0,0,0.3);
-    height: 400px;
+    height: 600px;
     border-radius: 20px;
   }
   
